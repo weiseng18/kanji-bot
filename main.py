@@ -165,7 +165,7 @@ def main():
         "PADDING": 5,
 
         # fire
-        "FIRE_PADDING": 0.4,
+        "FIRE_PADDING": 0.6,
         "FIRE_DECR_CHANCE": 0.2,
         "FIRE_DRAW_IDX_MIN": 4
     }
