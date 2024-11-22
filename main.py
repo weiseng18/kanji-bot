@@ -155,7 +155,7 @@ def generate_image(kanji_string, config):
 def main():
     config = {
         # font
-        "FONT": ("Noto Serif JP", cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL),
+        "FONT": ("Noto Sans Math", cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL),
         "FONT_SIZE": 100,
         "STROKE_WIDTH": 2,
         "STROKE_COLOR": (0, 0, 0),
@@ -165,14 +165,14 @@ def main():
         "PADDING": 5,
 
         # fire
-        "FIRE_PADDING": 0.6,
-        "FIRE_DECR_CHANCE": 0.2,
+        "FIRE_PADDING": 0.8,
+        "FIRE_DECR_CHANCE": 0.25,
         "FIRE_DRAW_IDX_MIN": 4
     }
 
     seed(42)
 
-    kanji_string = "我武者羅"
+    kanji_string = "ℝ"
     generate_image(kanji_string, config)
 
 
