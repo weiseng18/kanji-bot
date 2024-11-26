@@ -51,8 +51,8 @@ def add_fire(kanji_string, config, surface, width, height):
     one_width = width // len(kanji_string)
 
     # generate fire for 1 kanji of size (one_width, one_height)
-    grid_height = ceil(0.95 * one_height)
-    grid_width = ceil(0.9 * one_width)
+    grid_height = config["FIRE_GRID_HEIGHT"]
+    grid_width = config["FIRE_GRID_WIDTH"]
     grid = [[0 for j in range(grid_width)] for i in range(grid_height)]
 
     # set last row to white
@@ -172,7 +172,9 @@ def main():
         # fire
         "FIRE_PADDING": 0.8,
         "FIRE_DECR_CHANCE": 0.25,
-        "FIRE_DRAW_IDX_MIN": 4
+        "FIRE_DRAW_IDX_MIN": 4,
+        "FIRE_GRID_HEIGHT": 157,
+        "FIRE_GRID_WIDTH": 90
     }
 
     seed(42)
