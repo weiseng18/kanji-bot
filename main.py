@@ -115,6 +115,11 @@ def add_fire(kanji_string, config, surface, width, height):
 
 
 def generate_image(kanji_string, config):
+    image_surface = generate_image_surface(kanji_string, config)
+    image_surface.write_to_png("main.png")
+
+
+def generate_image_surface(kanji_string, config):
     x1, y1, x2, y2 = get_coord_info(kanji_string, config)
 
     # calculate image dimensions
@@ -149,7 +154,7 @@ def generate_image(kanji_string, config):
     context.set_source_rgb(*config["FILL_COLOR"])
     context.fill()
 
-    image_surface.write_to_png("main.png")
+    return image_surface
 
 
 def main():
