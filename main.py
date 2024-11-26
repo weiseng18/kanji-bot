@@ -1,4 +1,5 @@
 import cairo
+import io
 from math import ceil
 from random import randint, random, seed
 
@@ -117,6 +118,16 @@ def add_fire(kanji_string, config, surface, width, height):
 def generate_image(kanji_string, config):
     image_surface = generate_image_surface(kanji_string, config)
     image_surface.write_to_png("main.png")
+
+
+def generate_image_bytes(kanji_string, config):
+    image_surface = generate_image_surface(kanji_string, config)
+
+    img_data = io.BytesIO()
+    image_surface.write_to_png(img_data)
+    img_data.seek(0)
+    return img_data
+
 
 
 def generate_image_surface(kanji_string, config):
