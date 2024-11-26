@@ -48,6 +48,8 @@ def add_fire(kanji_string, config, surface, width, height):
         (0xFF, 0xFF, 0xFF)
     ]
 
+    seed(42)
+
     one_height = height
     one_width = width // len(kanji_string)
 
@@ -187,8 +189,6 @@ def main():
         "FIRE_GRID_HEIGHT": 157,
         "FIRE_GRID_WIDTH": 90
     }
-
-    seed(42)
 
     kanji_string = "ℝ"
     generate_image(kanji_string, config)
