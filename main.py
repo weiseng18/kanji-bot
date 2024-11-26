@@ -1,5 +1,5 @@
 import cairo
-from math import ceil, floor, pi
+from math import ceil
 from random import randint, random, seed
 
 
